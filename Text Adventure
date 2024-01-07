@@ -1,0 +1,57 @@
+#include <iostream> 
+ 
+int main() { 
+    // Story introduction 
+    std::cout << "Welcome to the Fantasy Adventure!\n"; 
+    std::cout << "You find yourself in a magical land with multiple paths to explore.\n"; 
+ 
+    // First branch point 
+    std::cout << "You come across a fork in the road. Do you want to go left or right?\n"; 
+    std::cout << "1. Go left\n"; 
+    std::cout << "2. Go right\n"; 
+ 
+    int choice1; 
+    std::cin >> choice1; 
+ 
+    if (choice1 == 1) { 
+        // Second branch point - Left path 
+        std::cout << "You find a hidden cave. Do you want to enter or continue on the path?\n"; 
+        std::cout << "1. Enter the cave\n"; 
+        std::cout << "2. Continue on the path\n"; 
+ 
+        int choice2; 
+        std::cin >> choice2; 
+ 
+        if (choice2 == 1) { 
+            // Third branch point - Cave exploration 
+            std::cout << "Inside the cave, you discover a treasure chest. What do you want to do?\n"; 
+            std::cout << "1. Open the chest\n"; 
+            std::cout << "2. Leave the cave\n"; 
+ 
+            int choice3; 
+            std::cin >> choice3; 
+ 
+            if (choice3 == 1) { 
+                // Ending 1 
+                std::cout << "Congratulations! You found a magical artifact and completed the adventure!\n"; 
+                return 0; 
+            } else { 
+                // Ending 2 
+                std::cout << "You decided to leave the cave. The adventure continues...\n"; 
+            } 
+        } else { 
+            // Ending 3 
+            std::cout << "You chose to continue on the path. The adventure continues...\n"; 
+        } 
+    } else if (choice1 == 2) { 
+        // Ending 4 
+        std::cout << "You chose to go right. The adventure continues...\n"; 
+    } else { 
+        // Invalid choice 
+        std::cout << "Invalid choice. The adventure ends here.\n"; 
+    } 
+ 
+    // Additional story or endings can be added here... 
+ 
+    return 0; 
+}
